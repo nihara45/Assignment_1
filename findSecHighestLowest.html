@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h3>Click button for second highest and lowest</h3>
+<button type="button" onclick="secHighLow([
+    40,20,10,56,61
+])">Try it</button>
+
+<script>
+
+function secHighLow(arr)
+{
+   if(arr.length > 1)                      //to check array is not with only one element
+   {
+     var high, secHigh, low, secLow;
+     if(arr[0] > arr[1])                           //to set high and low
+     { 
+        high = arr[0];
+        secHigh = arr[1];
+        low = arr[1];
+        secLow = arr[0];
+     }
+     else
+     { 
+       high = arr[1];
+       secHigh = arr[0];
+       low = arr[0];
+       secLow = arr[1];
+     }
+    
+    
+    var x;                                        // variable used in for loop
+   for(x = 2; x < arr.length; x++)
+  {
+     if(low > arr[x])
+     {
+        secLow = low;
+        low = arr[x];
+     }
+     else
+     if(secLow > arr[x])
+     {
+        secLow = arr[x];
+     }
+
+     if(high < arr[x])
+     {
+        secHigh = high;
+        high = arr[x];
+     }
+     else
+     if(secHigh < arr[x])
+    {
+        secHigh = arr[x];
+    }
+  }
+   document.write('Second lowest element is :' + secLow + '<br>' +         'Second highest element is:' + secHigh );
+ }
+
+   else
+    document.write("Array too small");
+}
+
+</script>
+
+</body>
+</html>

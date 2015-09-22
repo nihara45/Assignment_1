@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Click submit to repeat the string</h3>
+
+
+
+<button type="button" onclick="myFunction('Hi!',6)">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(str,no) 
+{
+     var text,i;   
+     if(no === undefined)
+     {
+        no = 1;
+     }
+     for(i = 0; i < no; i++)
+     {
+         text = document.getElementById("demo").innerHTML;//take content
+         document.getElementById("demo").innerHTML = text + str; //concate the string
+     }
+
+}
+</script>
+
+</body>
+</html> 
