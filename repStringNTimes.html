@@ -1,3 +1,6 @@
+<!-- This program is to write a JavaScript function to concatenates a given string n times (default is 1). This file is a HTML file to disply a button by clicking on it you will get given string repeat given no. of times  -->
+
+
 <!DOCTYPE html>
 <html>
 <body>
@@ -6,26 +9,13 @@
 
 
 
-<button type="button" onclick="myFunction('Hi!',6)">Submit</button>
+<button type="button" onclick="repString('Hi!',6)">Submit</button>    <!-- button, by clicking you will get result-->   
 
 <p id="demo"></p>
 
-<script>
-function myFunction(str,no) 
-{
-     var text,i;   
-     if(no === undefined)
-     {
-        no = 1;
-     }
-     for(i = 0; i < no; i++)
-     {
-         text = document.getElementById("demo").innerHTML;//take content
-         document.getElementById("demo").innerHTML = text + str; //concate the string
-     }
+<script src="repStringNTimes.js">                                    <!-- including the script file-->
 
-}
 </script>
 
 </body>
-</html> 
+</html>
